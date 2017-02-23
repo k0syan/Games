@@ -7,7 +7,7 @@ import React, {Component} from 'react';
 class NumbersArea extends Component {
   render() {
     return (
-      <div className="numbers-area">
+      <div className="numbers-area jumbotron">
         Numbers
       </div>
     );

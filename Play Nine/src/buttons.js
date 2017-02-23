@@ -8,8 +8,12 @@ class ButtonsArea extends Component {
   render() {
     return (
       <div className="buttons-area">
-        <button>=</button>
-        <button>=</button>
+        <button>
+          <span className="glyphicon glyphicon-check"></span>
+        </button>
+        <button>
+          <span className="glyphicon glyphicon-refresh"></span>
+        </button>
       </div>
     );
   }

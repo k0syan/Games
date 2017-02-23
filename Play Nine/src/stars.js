@@ -8,7 +8,15 @@ class StarArea extends Component {
   render() {
     return (
       <div className="stars-area jumbotron">
-        Star
+        <span className="glyphicon glyphicon-star"></span>
+        <span className="glyphicon glyphicon-star"></span>
+        <span className="glyphicon glyphicon-star"></span>
+        <span className="glyphicon glyphicon-star"></span>
+        <span className="glyphicon glyphicon-star"></span>
+        <span className="glyphicon glyphicon-star"></span>
+        <span className="glyphicon glyphicon-star"></span>
+        <span className="glyphicon glyphicon-star"></span>
+        <span className="glyphicon glyphicon-star"></span>
       </div>
     );
   }

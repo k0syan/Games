@@ -11,10 +11,12 @@
 }
 
 .stars-area {
-	border: 2px solid #555;
-	border-radius: 2px;
+	/*border: 2px solid #555;*/
+	/*border-radius: 2px;*/
 	display: inline-flex;
 	height: 250px;
+	justify-content: center;
+	margin: 20px 10px;
 	width: 150px;
 }
 
@@ -25,19 +27,26 @@
 	width: 50px;
 }
 
+.buttons-area button {
+	margin: 5px 0;
+}
+
 .numbers-area {
-	border: 2px solid #555;
-	border-radius: 2px;
+	/*border: 2px solid #555;*/
+	/*border-radius: 2px;*/
 	display: inline-flex;
 	height: 250px;
+	justify-content: center;
+	margin: 20px 10px;
 	width: 150px;
 }
 
 .answer-area {
-	border: 2px solid #555;
-	border-radius: 2px;
+	/*border: 2px solid #555;*/
+	/*border-radius: 2px;*/
 	display: flex;
-	margin: 20px 0;
 	height: 100px;
-	width: 400px;
+	justify-content: center;
+	margin: 20px 10px;
+	width: 370px;
 }
