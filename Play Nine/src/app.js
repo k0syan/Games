@@ -11,14 +11,14 @@ import NumbersArea from './numbers'
 class App extends Component {
   render() {
     return (
-      <div className="app">
-        <div className="game">
+      <div className="container" id="app">
+        <div className="row mt-5">
           <StarArea />
           <ButtonsArea />
-          <NumbersArea />
-        </div>
-        <div className="answer">
           <AnswerArea />
+        </div>
+        <div className="row mt-5">
+          <NumbersArea />
         </div>
       </div>
     );

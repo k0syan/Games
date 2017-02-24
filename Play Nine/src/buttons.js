@@ -7,13 +7,13 @@ import React, {Component} from 'react';
 class ButtonsArea extends Component {
   render() {
     return (
-      <div className="buttons-area">
-        <button>
-          <span className="glyphicon glyphicon-check"></span>
-        </button>
-        <button>
-          <span className="glyphicon glyphicon-refresh"></span>
-        </button>
+      <div className="col-2" id="actions">
+        <div className="btn-group-vertical">
+          <button className="btn btn-primary">=</button>
+          <button className="btn btn-info">
+            <i className="fa fa-refresh"></i>
+          </button>
+        </div>
       </div>
     );
   }
