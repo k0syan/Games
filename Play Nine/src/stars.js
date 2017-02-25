@@ -5,16 +5,25 @@
 import React, {Component} from 'react';
 
 class StarArea extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      stars: this.props.starsCount
+    };
+  }
+
   render() {
-    let indents = [];
-    for (let i = 0; i < Math.floor(Math.random() * 9) + 1 ; i++) {
-      indents.push(<i key={i.toString()} className="fa fa-star"></i>);
+    let stars = [];
+    for (let i = 0; i < this.state.stars; ++i) {
+      stars.push(
+        <i className="fa fa-star" key={i.toString()} />
+      );
     }
+
     return (
-      <div className="col-5" id="stars">
-        <div className="text-center">
-          {indents}
-        </div>
+      <div className="text-center">
+        {stars}
       </div>
     );
   }
