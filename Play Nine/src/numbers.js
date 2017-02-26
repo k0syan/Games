@@ -6,6 +6,7 @@ import React, {Component} from 'react';
 
 class NumbersArea extends Component {
   render() {
+
     let numbers = [];
     for (let i = 1; i < 10; ++i) {
       let className, disabled = false,
@@ -30,6 +31,16 @@ class NumbersArea extends Component {
           {i}
         </button>
       );
+    }
+
+    if (this.props.gameStatus === true) {
+      numbers = [];
+      numbers.push(<span key={'You won'}>Congratulations you won!!!</span>);
+      numbers.push(<button className="btn" onClick={this.props.startNewGame} key={'New Game'}>New Game</button>);
+    } else if (this.props.gameStatus === false) {
+      numbers = [];
+      numbers.push(<span key={'You lose'}>Sorry you lose :( </span>);
+      numbers.push(<button className="btn" onClick={this.props.startNewGame} key={'New Game'}>New Game</button>);
     }
 
     return (
