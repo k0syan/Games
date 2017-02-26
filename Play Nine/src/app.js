@@ -111,33 +111,35 @@ class App extends Component {
   }
 
   checkAnswer() {
-    if (this.state.correctAnswer === true) {
-      while (this.state.selectedNumbers.length) {
-        this.state.usedNumbers.push(this.state.selectedNumbers[0]);
-        let j = this.state.selectedNumbers.indexOf(this.state.selectedNumbers[0]);
-        this.state.selectedNumbers.splice(j, 1);
+    let state = this.state;
+    if (state.correctAnswer === true) {
+      while (state.selectedNumbers.length) {
+        state.usedNumbers.push(state.selectedNumbers[0]);
+        let j = state.selectedNumbers.indexOf(state.selectedNumbers[0]);
+        state.selectedNumbers.splice(j, 1);
       }
-      this.state.starsCount = this.starsCount();
-      this.state.correctAnswer = undefined;
-    } else if (this.state.correctAnswer === false) {
-      this.state.selectedNumbers = [];
-      this.state.correctAnswer = undefined;
+      state.starsCount = this.starsCount();
+      state.correctAnswer = undefined;
+    } else if (state.correctAnswer === false) {
+      state.selectedNumbers = [];
+      state.correctAnswer = undefined;
     } else {
       let sum = 0;
-      for (let i = 0; i < this.state.selectedNumbers.length; ++i) {
-        sum += this.state.selectedNumbers[i];
+      for (let i = 0; i < state.selectedNumbers.length; ++i) {
+        sum += state.selectedNumbers[i];
       }
 
-      this.state.correctAnswer = this.state.starsCount === sum;
+      state.correctAnswer = state.starsCount === sum;
     }
     this.checkGameStatus();
-    this.setState(this.state);
+    this.setState(state);
   }
 
   refreshStars() {
-    this.state.refreshCount -= 1;
-    this.state.starsCount = this.starsCount();
-    this.setState(this.state);
+    let state = this.state;
+    state.refreshCount -= 1;
+    state.starsCount = this.starsCount();
+    this.setState(state);
 
     this.checkGameStatus();
   }
