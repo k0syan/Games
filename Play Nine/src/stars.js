@@ -5,17 +5,9 @@
 import React, {Component} from 'react';
 
 class StarArea extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      stars: this.props.starsCount
-    };
-  }
-
   render() {
     let stars = [];
-    for (let i = 0; i < this.state.stars; ++i) {
+    for (let i = 0; i < this.props.starsCount; ++i) {
       stars.push(
         <i className="fa fa-star" key={i.toString()} />
       );

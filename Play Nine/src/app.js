@@ -16,11 +16,13 @@ class App extends Component {
     this.checkAnswer = this.checkAnswer.bind(this);
     this.starsCount = this.starsCount.bind(this);
     this.deselectNumber = this.deselectNumber.bind(this);
+    this.refreshStars = this.refreshStars.bind(this);
     this.state = {
       selectedNumbers: [],
       usedNumbers: [],
-      starsCount: Math.floor(Math.random() * 9) + 1,
-      correctAnswer: undefined
+      starsCount: this.starsCount(),
+      correctAnswer: undefined,
+      refreshCount: 5
     };
   }
 
@@ -38,33 +40,28 @@ class App extends Component {
       }
       this.state.starsCount = this.starsCount();
       this.state.correctAnswer = undefined;
-      this.setState(this.state);
     } else if (this.state.correctAnswer === false) {
       this.state.selectedNumbers = [];
       this.state.correctAnswer = undefined;
-      this.setState(this.state);
     } else {
       let sum = 0;
       for (let i = 0; i < this.state.selectedNumbers.length; ++i) {
         sum += this.state.selectedNumbers[i];
       }
 
-      if (sum == this.state.starsCount) {
-        this.state.correctAnswer = true;
-        this.setState(this.state);
-      } else {
-        this.state.correctAnswer = false;
-        this.setState(this.state);
-      }
+      this.state.correctAnswer = this.state.starsCount === sum;
     }
+    console.log(this.state.starsCount);
+    this.setState(this.state);
   }
 
   refreshStars() {
-    console.log('refresh');
+    this.state.refreshCount -= 1;
+    this.state.starsCount = this.starsCount();
+    this.setState(this.state);
   }
 
   starsCount() {
-    console.log('yaaay');
     return Math.floor(Math.random() * 9) + 1;
   }
 
@@ -97,7 +94,8 @@ class App extends Component {
           <div className="col-2" id="actions">
             <ButtonsArea checkAnswer={this.checkAnswer}
                          refreshStars={this.refreshStars}
-                         correctAnswer={this.state.correctAnswer} />
+                         correctAnswer={this.state.correctAnswer}
+                         refreshCount={this.state.refreshCount} />
           </div>
           <div className="col-5" id="answer">
             <AnswerArea deselectNumber={this.deselectNumber}
