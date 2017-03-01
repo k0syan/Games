@@ -1,0 +1,8 @@
+#app {
+	display: flex;
+	flex-direction: column;
+}
+
+#app > .container {
+	margin: 3em auto;
+}
