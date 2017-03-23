@@ -6,7 +6,7 @@ import React, {Component} from 'react';
 import StarArea from './stars'
 import ButtonsArea from './Buttons'
 import AnswerArea from './Answer'
-import NumbersArea from './numbers'
+import NumbersArea from './Numbers'
 
 class App extends Component {
   constructor(props) {
