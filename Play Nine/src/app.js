@@ -4,7 +4,7 @@
 
 import React, {Component} from 'react';
 import StarArea from './stars'
-import ButtonsArea from './buttons'
+import ButtonsArea from './Buttons'
 import AnswerArea from './Answer'
 import NumbersArea from './numbers'
 
