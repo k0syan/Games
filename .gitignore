@@ -1,5 +1,8 @@
 ### OSX ###
 .DS_Store
 
+### GCC ###
+*.out
+
 ### JetBrains ###
 .idea/
