@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Square from './Square'
+import Square from './Square/Square'
 
 class App extends Component {
   render() {
