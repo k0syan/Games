@@ -10,7 +10,7 @@ class Square extends Component {
     let content = null;
     if (this.props.choice) {
       let className = this.props.choice;
-      content = <i className={className}></i>
+      content = <i className={className} />
     }
 
     return (
