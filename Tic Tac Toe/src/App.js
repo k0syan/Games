@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+import Square from './Square/Square';
 import './App.css';
-
-import Square from './Square/Square'
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <Square choice="fa fa-circle-o"/>
-        <Square choice="fa fa-times"/>
+        <Square choice="fa fa-circle-o" />
+        <Square choice="fa fa-times" />
       </div>
     );
   }
