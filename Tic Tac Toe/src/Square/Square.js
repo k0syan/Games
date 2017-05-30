@@ -12,7 +12,6 @@ class Square extends Component {
       let className = this.props.choice;
       content = <i className={className} />
     }
-
     return (
       <div className="square">
         {content}
