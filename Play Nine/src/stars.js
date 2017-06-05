@@ -12,7 +12,6 @@ class StarArea extends Component {
         <i className="fa fa-star" key={i.toString()} />
       );
     }
-
     return (
       <div className="text-center">
         {stars}
