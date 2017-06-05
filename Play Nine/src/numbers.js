@@ -6,7 +6,6 @@ import React, {Component} from 'react';
 
 class NumbersArea extends Component {
   render() {
-
     let numbers = [];
     for (let i = 1; i < 10; ++i) {
       let className, disabled = false,
@@ -22,7 +21,6 @@ class NumbersArea extends Component {
       } else {
         className = 'btn btn-secondary';
       }
-
       numbers.push(
         <button className={className}
                 disabled={disabled}
